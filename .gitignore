@@ -1,0 +1,78 @@
+# === ビルド成果物 ===
+# ビルド出力（APK, AAB など）とクラスファイル
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# ビルドフォルダ（モジュール単位含む）
+/build/
+/**/build/
+
+# キャプチャ（Android Studio の画面キャプチャなど）
+/captures/
+
+# === Gradle ===
+/.gradle/           # キャッシュ・ローカル状態
+# gradle-wrapper.jar は追跡したいので ignore しない（デフォルトでコミット）
+# ラッパーの設定ファイルなどは通常コミットする
+
+# ローカル設定（SDK パス等、共有すべきでない）
+local.properties
+
+# === サインキー / 秘密情報 ===
+*.jks
+*.keystore
+keystore.properties    # （例：署名情報を外部化しているなら含めない）
+# 秘密の設定ファイル（必要ならテンプレートだけコミットして実体は除外）
+# e.g. secret.properties
+
+# === Android Studio / IntelliJ ===
+# IDE が作るワークスペースやキャッシュ類
+/.idea/
+/*.iml
+*.iws
+.idea/*
+
+# ただし共有したい設定があるなら個別除外を調整する例（必要なら uncomment）
+# !/.idea/inspectionProfiles
+# !/.idea/codeStyles/
+
+# プロファイルやヒープダンプ
+*.hprof
+
+# === Native / NDK ===
+/.externalNativeBuild/
+/.cxx/
+
+# === テスト結果・一時ファイル ===
+/test-results/
+/androidTest-output/
+*.log
+*.orig
+
+# === OS・エディタのゴミ ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+*.swp
+*~
+.project
+.idea_modules/
+
+# === Firebase / Google サービス（必要に応じて管理） ===
+# google-services.json
+# GoogleService-Info.plist
+
+# === Crashlytics / Fabric ===
+crashlytics-build.properties
+
+# === その他生成物／一時 ===
+*.iml
+*.keystore
+output.json
+
+# === Optional: バージョン管理対象にしないがテンプレートは残す例 ===
+# README やテンプレートを通じて、ユーザが自分で置くようにする
+# example.env
